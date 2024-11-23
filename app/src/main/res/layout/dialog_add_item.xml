@@ -1,38 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#F7F7F7">
 
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Add Item"
+        android:textSize="30sp"
+        android:textColor="#388E3C"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        />
+
+    <!-- Item Name EditText -->
     <EditText
         android:id="@+id/itemNameEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Enter Item Name"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColorHint="#A9A9A9"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"/>
 
+    <!-- Item Quantity EditText -->
     <EditText
         android:id="@+id/itemQuantityEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Enter Quantity"
+        android:textColorHint="#A9A9A9"
+        android:textColor="@android:color/black"
         android:inputType="number"
         app:layout_constraintTop_toBottomOf="@id/itemNameEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
 
+    <!-- Item Price EditText -->
     <EditText
         android:id="@+id/itemPriceEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Enter Price"
+        android:textColorHint="#A9A9A9"
+        android:textColor="@android:color/black"
         android:inputType="numberDecimal"
         app:layout_constraintTop_toBottomOf="@id/itemQuantityEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+
+    <!-- Buttons (Add and Cancel) -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        app:layout_constraintTop_toBottomOf="@id/itemPriceEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:textColor="@color/white"
+            android:backgroundTint="#388E3C"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:backgroundTint="#D32F2F" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
