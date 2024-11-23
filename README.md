@@ -18,6 +18,13 @@ A simple Android app to help users manage their grocery list. The app allows use
   - AlertDialog for item addition
   - Toast messages for notifications
   - LinearLayout for dynamic list generation
+
+## Screenshot
+
+https://github.com/Bhakti2004/Grocery_List_22012011065/blob/master/SplashScreen.jpg
+https://github.com/Bhakti2004/Grocery_List_22012011065/blob/master/MainScreen.jpg
+https://github.com/Bhakti2004/Grocery_List_22012011065/blob/master/AddItem.jpg
+https://github.com/Bhakti2004/Grocery_List_22012011065/blob/master/Result.jpg
  
 ## Installation
 https://github.com/Bhakti2004/Grocery_List_22012011065
